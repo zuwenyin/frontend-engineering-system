@@ -9,6 +9,9 @@
     "pnpm": ">=11.0.0"
   },
   "scripts": {
+    "dev": "pnpm --filter web dev",
+    "build": "pnpm --filter web build",
+    "preview": "pnpm --filter web preview",
     "check": "pnpm -r --if-present check"
   },
   "author": "zuwenyin",
