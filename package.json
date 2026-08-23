@@ -1,0 +1,16 @@
+{
+  "name": "frontend-engineering-system",
+  "version": "1.0.0",
+  "private": true,
+  "description": "一个从零开始搭建的monorepo实战项目",
+  "packageManager": "pnpm@11.9.0",
+  "engines": {
+    "node": ">=22.0.0",
+    "pnpm": ">=11.0.0"
+  },
+  "scripts": {
+    "check": "pnpm -r --if-present check"
+  },
+  "author": "zuwenyin",
+  "license": "ISC"
+}
