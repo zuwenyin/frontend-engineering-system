@@ -14,7 +14,7 @@
     "lint": "pnpm --filter web lint",
     "typecheck": "pnpm --filter web typecheck",
     "preview": "pnpm --filter web preview",
-    "check": "pnpm -r --if-present check"
+    "check": "pnpm lint && pnpm typecheck && pnpm build"
   },
   "author": "zuwenyin",
   "license": "ISC"
