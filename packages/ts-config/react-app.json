@@ -1,0 +1,12 @@
+{
+  "extends": "./base.json",
+  "compilerOptions": {
+    "lib": ["ES2023", "DOM"],
+    "module": "ESNext",
+    "moduleResolution": "bundler",
+    "allowImportingTsExtensions": false,
+    "noEmit": true,
+    "jsx": "react-jsx",
+    "isolatedModules": true
+  }
+}

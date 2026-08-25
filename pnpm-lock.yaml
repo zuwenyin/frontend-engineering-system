@@ -20,6 +20,9 @@ importers:
       '@eslint/js':
         specifier: ^10.0.1
         version: 10.0.1(eslint@10.9.0)
+      '@frontend-engineering-system/ts-config':
+        specifier: workspace:*
+        version: link:../../packages/ts-config
       '@types/node':
         specifier: ^24.13.3
         version: 24.13.3
@@ -53,6 +56,8 @@ importers:
       vite:
         specifier: ^8.2.0
         version: 8.2.2(@types/node@24.13.3)
+
+  packages/ts-config: {}
 
 packages:
 
