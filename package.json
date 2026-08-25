@@ -11,6 +11,8 @@
   "scripts": {
     "dev": "pnpm --filter web dev",
     "build": "pnpm --filter web build",
+    "lint": "pnpm --filter web lint",
+    "typecheck": "pnpm --filter web typecheck",
     "preview": "pnpm --filter web preview",
     "check": "pnpm -r --if-present check"
   },
