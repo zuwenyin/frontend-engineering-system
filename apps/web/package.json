@@ -16,6 +16,7 @@
   },
   "devDependencies": {
     "@frontend-engineering-system/ts-config":"workspace:*",
+    "@frontend-engineering-system/eslint-config":"workspace:*",
     "@eslint/js": "^10.0.1",
     "@types/node": "^24.13.3",
     "@types/react": "^19.2.17",
