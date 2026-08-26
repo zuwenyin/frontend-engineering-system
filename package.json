@@ -14,8 +14,13 @@
     "lint": "pnpm --filter web lint",
     "typecheck": "pnpm --filter web typecheck",
     "preview": "pnpm --filter web preview",
-    "check": "pnpm lint && pnpm typecheck && pnpm build"
+    "check": "pnpm lint && pnpm typecheck && pnpm build",
+    "format": "prettier --write .",
+    "format:check": "prettier --check ."
   },
   "author": "zuwenyin",
-  "license": "ISC"
+  "license": "ISC",
+  "devDependencies": {
+    "prettier": "^3.9.6"
+  }
 }
