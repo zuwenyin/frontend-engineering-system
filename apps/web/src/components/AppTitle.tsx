@@ -10,6 +10,8 @@ export function AppTitle({ subtitle }: AppTitleProps) {
     </section>
   )
 }
+const a = 1
+console.log("aaa", a)
 
 // // noUnusedLocals: true 时，下面这行会报错
 // const deadVariable = 42;  // ❌ 错误：'deadVariable' 已声明但从未读取

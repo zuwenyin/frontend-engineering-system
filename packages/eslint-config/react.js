@@ -1,8 +1,8 @@
-import { defineConfig } from "eslint/config";
-import globals from "globals";
-import reactHooks from "eslint-plugin-react-hooks";
-import reactRefresh from "eslint-plugin-react-refresh";
-import base from "./base.js";
+import { defineConfig } from "eslint/config"
+import globals from "globals"
+import reactHooks from "eslint-plugin-react-hooks"
+import reactRefresh from "eslint-plugin-react-refresh"
+import base from "./base.js"
 
 export default defineConfig([
   // 先将 base 的配置对象展开
@@ -20,10 +20,7 @@ export default defineConfig([
     rules: {
       //添加了一些额外的规则
       ...reactHooks.configs.recommended.rules,
-      "react-refresh/only-export-components": [
-        "warn",
-        { allowConstantExport: true },
-      ],
+      "react-refresh/only-export-components": ["warn", { allowConstantExport: true }],
     },
   },
-]);
+])

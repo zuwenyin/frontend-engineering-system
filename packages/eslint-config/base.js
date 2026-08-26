@@ -1,7 +1,7 @@
-import js from "@eslint/js";
-import { defineConfig, globalIgnores } from "eslint/config";
-import eslintConfigPrettier from "eslint-config-prettier";
-import tseslint from "typescript-eslint";
+import js from "@eslint/js"
+import { defineConfig, globalIgnores } from "eslint/config"
+import eslintConfigPrettier from "eslint-config-prettier"
+import tseslint from "typescript-eslint"
 
 export default defineConfig([
   // 哪些目录需要忽略
@@ -10,4 +10,4 @@ export default defineConfig([
   js.configs.recommended,
   ...tseslint.configs.recommended,
   eslintConfigPrettier,
-]);
+])
