@@ -1,9 +1,6 @@
-import { HomePage } from "@/pages/home/HomePage"
+import { RouterProvider } from "react-router"
+import { router } from "@/app/router/router"
 
 export default function App() {
-  return (
-    <main>
-      <HomePage />
-    </main>
-  )
+  return <RouterProvider router={router} />
 }

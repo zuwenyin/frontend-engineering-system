@@ -13,12 +13,13 @@
   },
   "dependencies": {
     "react": "^19.2.8",
-    "react-dom": "^19.2.8"
+    "react-dom": "^19.2.8",
+    "react-router": "^8.3.1"
   },
   "devDependencies": {
-    "@frontend-engineering-system/ts-config": "workspace:*",
-    "@frontend-engineering-system/eslint-config": "workspace:*",
     "@eslint/js": "^10.0.1",
+    "@frontend-engineering-system/eslint-config": "workspace:*",
+    "@frontend-engineering-system/ts-config": "workspace:*",
     "@types/node": "^24.13.3",
     "@types/react": "^19.2.17",
     "@types/react-dom": "^19.2.3",
