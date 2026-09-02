@@ -12,6 +12,7 @@
     "preview": "vite preview"
   },
   "dependencies": {
+    "@tanstack/react-query": "^5.102.8",
     "react": "^19.2.8",
     "react-dom": "^19.2.8",
     "react-router": "^8.3.1"
@@ -20,6 +21,7 @@
     "@eslint/js": "^10.0.1",
     "@frontend-engineering-system/eslint-config": "workspace:*",
     "@frontend-engineering-system/ts-config": "workspace:*",
+    "@tanstack/react-query-devtools": "^5.102.8",
     "@types/node": "^24.13.3",
     "@types/react": "^19.2.17",
     "@types/react-dom": "^19.2.3",

@@ -12,6 +12,13 @@ export const router = createBrowserRouter([
       // index: true 表示它是父路由 / 的默认页面。
       { index: true, Component: HomePage },
       {
+        path: "users",
+        lazy: async () => {
+          const { UserListPage } = await import("@/pages/users")
+          return { Component: UserListPage }
+        },
+      },
+      {
         Component: RequireAuth,
         children: [
           {

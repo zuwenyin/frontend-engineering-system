@@ -7,6 +7,7 @@ export function MainLayout() {
         <strong>Frontend Engineering System</strong>
         <nav aria-label="Main navigation">
           <NavLink to="/">Home</NavLink>
+          <NavLink to="/users">Users</NavLink>
           <NavLink to="/settings">Settings</NavLink>
         </nav>
       </header>
