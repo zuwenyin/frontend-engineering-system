@@ -1,20 +1,12 @@
-import { env } from "@/shared/config"
 import { PageTitle } from "@/shared/ui"
 
 export function HomePage() {
   return (
     <main>
-      <PageTitle title="frontend-engineering-system" subtitle="工程管理项目" />
-      <dl>
-        <dt>App Env</dt>
-        <dd>{env.appEnv}</dd>
-        <dt>API Base URL</dt>
-        <dd>{env.apiBaseUrl}</dd>
-        <dt>Enable Mock</dt>
-        <dd>{env.enableMock ? "Yes" : "No"}</dd>
-        <dt>Enable Monitoring</dt>
-        <dd>{env.enableMonitoring ? "Yes" : "No"}</dd>
-      </dl>
+      <PageTitle title="frontend-engineering-system" subtitle="工程管理实战" />
+      <section className="rounded-[--radius-card] border border-surface-100 bg-white p-6 shadow-sm">
+        <p className="text-sm leading-6 text-surface-900/70">这是首页，欢迎👏</p>
+      </section>
     </main>
   )
 }

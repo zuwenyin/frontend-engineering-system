@@ -6,19 +6,26 @@ export function SettingsPage() {
   return (
     <main>
       <PageTitle title="设置页" subtitle="管理应用运行时配置" />
-      <dl>
-        <dt>当前环境</dt>
-        <dd>{env.appEnv}</dd>
-        <dt>API Base URL</dt>
-        <dd>{env.apiBaseUrl}</dd>
-        <dt>Mock Enabled</dt>
-        <dd>{env.enableMock ? "yes" : "no"}</dd>
-        <dt>监视</dt>
-        <dd>{env.enableMonitoring ? "enabled" : "disabled"}</dd>
-      </dl>
-      <p>
-        <Link to="/">返回主页</Link>
-      </p>
+      <section className="rounded-[--radius-card] border border-surface-100 bg-white p-6 shadow-sm">
+        <dl className="grid gap-4 text-sm md:grid-cols-2">
+          <dt className="font-medium text-surface-900">当前环境</dt>
+          <dd className="mt-1 text-surface-900/70">{env.appEnv}</dd>
+          <dt className="font-medium text-surface-900">API Base URL</dt>
+          <dd className="mt-1 text-surface-900/70">{env.apiBaseUrl}</dd>
+          <dt className="font-medium text-surface-900">Mock Enabled</dt>
+          <dd className="mt-1 text-surface-900/70">{env.enableMock ? "yes" : "no"}</dd>
+          <dt className="font-medium text-surface-900">监视</dt>
+          <dd className="mt-1 text-surface-900/70">
+            {env.enableMonitoring ? "enabled" : "disabled"}
+          </dd>
+        </dl>
+      </section>
+      <Link
+        to="/"
+        className="mt-5 inline-flex items-center rounded-md border border-surface-100 bg-white px-4 py-2 text-sm font-medium text-surface-900 shadow-sm transition-colors hover:bg-surface-50"
+      >
+        ← 返回主页
+      </Link>
     </main>
   )
 }
