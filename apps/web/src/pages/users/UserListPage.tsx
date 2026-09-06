@@ -29,7 +29,7 @@ export function UserListPage() {
     <main>
       <PageTitle title="用户" subtitle="Users are loaded through the shared request layer." />
 
-      <section className="rounded-[--radius-card] border border-surface-100 bg-white p-6 shadow-sm">
+      <section className="rounded-[--radius-card] border border-surface-100 bg-surface-0 p-6 shadow-sm">
         <div className="mb-4 flex flex-wrap items-center justify-between gap-3">
           {/* 模拟了三个场景：成功、数据为空、错误 */}
           {/* 通过传递不同的 URL 查询参数来实现 */}

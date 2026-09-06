@@ -10,7 +10,7 @@ export function MainLayout() {
   return (
     <div className="min-h-screen bg-surface-50 text-surface-900">
       {/* header这一块儿相当于所有页面都有的内容，因此单独抽取到layout组件里面 */}
-      <header className="border-b border-surface-100 bg-white">
+      <header className="border-b border-surface-100 bg-surface-0">
         <div className="mx-auto flex max-w-[--container-page] items-center justify-between px-6 py-4">
           <strong className="text-base font-semibold">frontend-engineering-system</strong>
           <nav aria-label="Main navigation" className="flex items-center gap-2">
