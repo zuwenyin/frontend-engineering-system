@@ -1,9 +1,9 @@
 import { useQuery } from "@tanstack/react-query"
 import { Link, useSearchParams } from "react-router"
 
-import { getUsers } from "@/entities/user"
+import { getUsers, UserStatusBadge } from "@/entities/user"
 import type { UserListScenario } from "@/entities/user"
-import { PageTitle, UserStatusBadge } from "@/shared/ui"
+import { Button, Card, PageTitle, getButtonClassName } from "@/shared/ui"
 
 function readScenario(value: string | null): UserListScenario {
   if (value === "empty" || value === "error") {
@@ -14,11 +14,16 @@ function readScenario(value: string | null): UserListScenario {
 }
 
 export function UserListPage() {
+  // 就是读取 parmas
   // 读取当前 URL 的查询参数，例如 /users?scenario=empty → { scenario: "empty" }
   const [searchParams] = useSearchParams()
-  // 将 scenario 查询参数归一化为合法枚举值，详见 readScenario
+
+  // 保证 scenario 一定是一个合法值
   const scenario = readScenario(searchParams.get("scenario"))
 
+  // 这里就是利用 tanstack query
+  // 1. queryFn -> 负责调用请求方法
+  // 2. queryKey -> 缓存服务器状态数据
   const usersQuery = useQuery({
     queryKey: ["users", scenario],
     queryFn: () => getUsers(scenario),
@@ -29,35 +34,41 @@ export function UserListPage() {
     <main>
       <PageTitle title="用户" subtitle="Users are loaded through the shared request layer." />
 
-      <section className="rounded-[--radius-card] border border-surface-100 bg-surface-0 p-6 shadow-sm">
+      <Card>
         <div className="mb-4 flex flex-wrap items-center justify-between gap-3">
-          {/* 模拟了三个场景：成功、数据为空、错误 */}
-          {/* 通过传递不同的 URL 查询参数来实现 */}
           <nav aria-label="用户列表场景" className="flex flex-wrap items-center gap-2">
             <Link
-              className="rounded-md bg-brand-600 px-3 py-2 text-sm font-medium text-white"
+              aria-current={scenario === "success" ? "page" : undefined}
+              className={getButtonClassName({
+                variant: scenario === "success" ? "primary" : "secondary",
+                size: "sm",
+              })}
               to="/users"
             >
               成功
             </Link>
-
             <Link
-              className="rounded-md bg-surface-100 px-3 py-2 text-sm font-medium text-surface-900"
+              aria-current={scenario === "empty" ? "page" : undefined}
+              className={getButtonClassName({
+                variant: scenario === "empty" ? "primary" : "secondary",
+                size: "sm",
+              })}
               to="/users?scenario=empty"
             >
               数据为空
             </Link>
-
             <Link
-              className="rounded-md bg-surface-100 px-3 py-2 text-sm font-medium text-surface-900"
+              aria-current={scenario === "error" ? "page" : undefined}
+              className={getButtonClassName({
+                variant: scenario === "error" ? "primary" : "secondary",
+                size: "sm",
+              })}
               to="/users?scenario=error"
             >
               错误
             </Link>
           </nav>
         </div>
-
-        {/* 根据 usersQuery 的不同状态，渲染不同的页面内容 */}
 
         {usersQuery.isPending ? (
           <p className="rounded-md bg-surface-100 p-4 text-sm text-surface-900/70">
@@ -68,14 +79,14 @@ export function UserListPage() {
         {usersQuery.isError ? (
           <section className="rounded-md bg-danger-50 p-4 text-sm text-danger-700">
             <p>加载用户列表失败</p>
-
-            <button
-              className="mt-3 rounded-md bg-danger-700 px-3 py-2 text-sm font-medium text-white"
-              type="button"
+            <Button
+              className="mt-3"
+              variant="danger"
+              size="sm"
               onClick={() => usersQuery.refetch()}
             >
               重试
-            </button>
+            </Button>
           </section>
         ) : null}
 
@@ -93,17 +104,14 @@ export function UserListPage() {
                 key={user.id}
               >
                 <strong className="font-medium text-surface-900">{user.name}</strong>
-
                 <span className="text-surface-900/70">{user.email}</span>
-
                 <span className="text-surface-900/70">{user.role}</span>
-
                 <UserStatusBadge status={user.status} />
               </li>
             ))}
           </ul>
         ) : null}
-      </section>
+      </Card>
     </main>
   )
 }
