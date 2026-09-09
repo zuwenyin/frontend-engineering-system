@@ -1,4 +1,5 @@
 @import "tailwindcss"; /* 负责导入 Tailwind */
+@source "../../../packages/ui/src";
 
 /* 负责定义项目设计令牌 */
 @theme {

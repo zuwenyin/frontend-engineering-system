@@ -1,5 +1,5 @@
 import { Link } from "react-router"
-import { PageTitle } from "@/shared/ui"
+import { PageTitle } from "@frontend-engineering-system/ui"
 
 export function NotFoundPage() {
   return (

@@ -1,6 +1,6 @@
 import type { ComponentPropsWithoutRef } from "react"
 
-import { getButtonClassName, type ButtonSize, type ButtonVariant } from "@/shared/ui/button-styles"
+import { getButtonClassName, type ButtonSize, type ButtonVariant } from "./button-styles"
 
 type ButtonProps = ComponentPropsWithoutRef<"button"> & {
   variant?: ButtonVariant
