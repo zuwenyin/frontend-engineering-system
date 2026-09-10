@@ -10,7 +10,9 @@
   },
   "scripts": {
     "dev": "pnpm --filter web dev",
-    "build": "pnpm --filter web build",
+    "build:web": "pnpm --filter web build",
+    "build:utils": "pnpm --filter utils build",
+    "build": "pnpm --r --if-present run build",
     "build:staging": "pnpm --filter web build:staging",
     "lint": "pnpm --r --if-present run lint",
     "typecheck": "pnpm --r --if-present run typecheck",

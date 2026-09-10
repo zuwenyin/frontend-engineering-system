@@ -1,0 +1,11 @@
+{
+  "extends": "@frontend-engineering-system/ts-config/base.json",
+  "compilerOptions": {
+    "target": "ESNext",
+    "declaration": true,
+    "emitDeclarationOnly": false,
+    "outDir": "dist",
+    "rootDir": "src"
+  },
+  "include": ["src"]
+}

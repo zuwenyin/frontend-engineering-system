@@ -1,18 +1,42 @@
 {
   "name": "@frontend-engineering-system/utils",
-  "version": "0.0.0",
-  "private": true,
+  "author": "Wenyin Zu",
+  "version": "0.1.0",
+  "description": "Shared utility functions for frontend-engineering-system.",
+  "license": "MIT",
+  "private": false,
   "type": "module",
-  "main": "./src/index.ts",
-  "types": "./src/index.ts",
+  "main": "./dist/index.js",
+  "module": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.js"
+    }
+  },
+  "files": [
+    "dist",
+    "README.md",
+    "LICENSE"
+  ],
   "scripts": {
+    "build": "tsc -p tsconfig.build.json",
     "lint": "eslint .",
-    "typecheck": "tsc --noEmit"
+    "typecheck": "tsc --noEmit",
+    "pack:check": "npm pack --dry-run",
+    "prepublishOnly": "pnpm lint && pnpm typecheck && pnpm build && pnpm pack:check"
+  },
+  "publishConfig": {
+    "registry": "https://registry.npmjs.org/",
+    "access": "public"
   },
   "devDependencies": {
     "@frontend-engineering-system/eslint-config": "workspace:*",
     "@frontend-engineering-system/ts-config": "workspace:*",
-    "eslint": "^10.6.0",
-    "typescript": "~6.0.2"
+    "typescript": "~6.0.2",
+    "eslint": "^10.5.0",
+    "eslint-config-prettier": "^10.1.8",
+    "typescript-eslint": "^8.61.0"
   }
 }
