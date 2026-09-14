@@ -1,5 +1,11 @@
 # @zuwy/frontend-engineering-system-utils
 
+## 0.2.1
+
+### Patch Changes
+
+- 64fe143: feat: 增加CHANFELOG.md文件
+
 ## 0.2.0
 
 ### Minor Changes
