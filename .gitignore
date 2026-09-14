@@ -25,3 +25,6 @@ dist-ssr
 *.sln
 *.sw?
 *.local
+
+*storybook.log
+storybook-static
