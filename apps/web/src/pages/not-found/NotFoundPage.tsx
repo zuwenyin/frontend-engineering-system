@@ -1,5 +1,5 @@
 import { Link } from "react-router"
-import { PageTitle } from "@frontend-engineering-system/ui"
+import { PageTitle } from "@zuwy/frontend-engineering-system-ui"
 
 export function NotFoundPage() {
   return (

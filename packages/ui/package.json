@@ -1,5 +1,5 @@
 {
-  "name": "@frontend-engineering-system/ui",
+  "name": "@zuwy/frontend-engineering-system-ui",
   "version": "0.0.0",
   "private": true,
   "type": "module",
@@ -14,8 +14,8 @@
     "react-dom": "^19.2.7"
   },
   "devDependencies": {
-    "@frontend-engineering-system/eslint-config": "workspace:*",
-    "@frontend-engineering-system/ts-config": "workspace:*",
+    "@zuwy/frontend-engineering-system-eslint-config": "workspace:*",
+    "@zuwy/frontend-engineering-system-ts-config": "workspace:*",
     "@types/react": "^19.2.17",
     "@types/react-dom": "^19.2.3",
     "eslint": "^10.6.0",

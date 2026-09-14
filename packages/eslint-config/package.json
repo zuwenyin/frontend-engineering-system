@@ -1,5 +1,5 @@
 {
-  "name": "@frontend-engineering-system/eslint-config",
+  "name": "@zuwy/frontend-engineering-system-eslint-config",
   "version": "0.0.0",
   "private": true,
   "type": "module",

@@ -12,8 +12,8 @@
     "preview": "vite preview"
   },
   "dependencies": {
-    "@frontend-engineering-system/ui": "workspace:*",
-    "@frontend-engineering-system/utils": "workspace:*",
+    "@zuwy/frontend-engineering-system-ui": "workspace:*",
+    "@zuwy/frontend-engineering-system-utils": "workspace:*",
     "@tanstack/react-query": "^5.102.8",
     "react": "^19.2.8",
     "react-dom": "^19.2.8",
@@ -21,8 +21,8 @@
   },
   "devDependencies": {
     "@eslint/js": "^10.0.1",
-    "@frontend-engineering-system/eslint-config": "workspace:*",
-    "@frontend-engineering-system/ts-config": "workspace:*",
+    "@zuwy/frontend-engineering-system-eslint-config": "workspace:*",
+    "@zuwy/frontend-engineering-system-ts-config": "workspace:*",
     "@tailwindcss/vite": "^4.3.3",
     "@tanstack/react-query-devtools": "^5.102.8",
     "@types/node": "^24.13.3",

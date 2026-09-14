@@ -26,15 +26,15 @@ importers:
 
   apps/web:
     dependencies:
-      '@frontend-engineering-system/ui':
-        specifier: workspace:*
-        version: link:../../packages/ui
-      '@frontend-engineering-system/utils':
-        specifier: workspace:*
-        version: link:../../packages/utils
       '@tanstack/react-query':
         specifier: ^5.102.8
         version: 5.102.8(react@19.2.8)
+      '@zuwy/frontend-engineering-system-ui':
+        specifier: workspace:*
+        version: link:../../packages/ui
+      '@zuwy/frontend-engineering-system-utils':
+        specifier: workspace:*
+        version: link:../../packages/utils
       react:
         specifier: ^19.2.8
         version: 19.2.8
@@ -48,12 +48,6 @@ importers:
       '@eslint/js':
         specifier: ^10.0.1
         version: 10.0.1(eslint@10.9.0(jiti@2.6.1))
-      '@frontend-engineering-system/eslint-config':
-        specifier: workspace:*
-        version: link:../../packages/eslint-config
-      '@frontend-engineering-system/ts-config':
-        specifier: workspace:*
-        version: link:../../packages/ts-config
       '@tailwindcss/vite':
         specifier: ^4.3.3
         version: 4.3.3(vite@8.2.2(@types/node@24.13.3)(jiti@2.6.1)(yaml@2.9.0))
@@ -72,6 +66,12 @@ importers:
       '@vitejs/plugin-react':
         specifier: ^6.0.4
         version: 6.1.0(vite@8.2.2(@types/node@24.13.3)(jiti@2.6.1)(yaml@2.9.0))
+      '@zuwy/frontend-engineering-system-eslint-config':
+        specifier: workspace:*
+        version: link:../../packages/eslint-config
+      '@zuwy/frontend-engineering-system-ts-config':
+        specifier: workspace:*
+        version: link:../../packages/ts-config
       eslint:
         specifier: ^10.8.0
         version: 10.9.0(jiti@2.6.1)
@@ -132,18 +132,18 @@ importers:
         specifier: ^19.2.7
         version: 19.2.8(react@19.2.8)
     devDependencies:
-      '@frontend-engineering-system/eslint-config':
-        specifier: workspace:*
-        version: link:../eslint-config
-      '@frontend-engineering-system/ts-config':
-        specifier: workspace:*
-        version: link:../ts-config
       '@types/react':
         specifier: ^19.2.17
         version: 19.2.18
       '@types/react-dom':
         specifier: ^19.2.3
         version: 19.2.4(@types/react@19.2.18)
+      '@zuwy/frontend-engineering-system-eslint-config':
+        specifier: workspace:*
+        version: link:../eslint-config
+      '@zuwy/frontend-engineering-system-ts-config':
+        specifier: workspace:*
+        version: link:../ts-config
       eslint:
         specifier: ^10.6.0
         version: 10.9.0(jiti@2.7.0)
@@ -153,10 +153,10 @@ importers:
 
   packages/utils:
     devDependencies:
-      '@frontend-engineering-system/eslint-config':
+      '@zuwy/frontend-engineering-system-eslint-config':
         specifier: workspace:*
         version: link:../eslint-config
-      '@frontend-engineering-system/ts-config':
+      '@zuwy/frontend-engineering-system-ts-config':
         specifier: workspace:*
         version: link:../ts-config
       eslint:

@@ -1,3 +1,3 @@
-import reactConfig from "@frontend-engineering-system/eslint-config/react"
+import reactConfig from "@zuwy/frontend-engineering-system-eslint-config/react"
 
 export default reactConfig

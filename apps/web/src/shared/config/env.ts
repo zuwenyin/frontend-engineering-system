@@ -1,4 +1,4 @@
-import { readBoolean } from "@frontend-engineering-system/utils"
+import { readBoolean } from "@zuwy/frontend-engineering-system-utils"
 
 type AppEnv = "development" | "staging" | "production"
 

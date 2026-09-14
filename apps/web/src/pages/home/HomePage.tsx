@@ -1,4 +1,4 @@
-import { Card, PageTitle } from "@frontend-engineering-system/ui"
+import { Card, PageTitle } from "@zuwy/frontend-engineering-system-ui"
 
 export function HomePage() {
   return (

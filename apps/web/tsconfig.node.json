@@ -1,5 +1,5 @@
 {
-  "extends": "@frontend-engineering-system/ts-config/node.json",
+  "extends": "@zuwy/frontend-engineering-system-ts-config/node.json",
   "compilerOptions": {
     "tsBuildInfoFile": "./node_modules/.tmp/tsconfig.node.tsbuildinfo",
     "types": ["node"]

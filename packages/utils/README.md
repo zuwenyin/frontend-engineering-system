@@ -1,17 +1,17 @@
-# @frontend-engineering-system/utils
+# @zuwy/frontend-engineering-system-utils
 
 Shared utility functions for frontend-engineering-system.
 
 ## Installation
 
 ```bash
-pnpm add @frontend-engineering-system/utils
+pnpm add @zuwy/frontend-engineering-system-utils
 ```
 
 ## Usage
 
 ```ts
-import { readBoolean } from "@frontend-engineering-system/utils"
+import { readBoolean } from "@zuwy/frontend-engineering-system-utils"
 
 readBoolean("true")
 ```

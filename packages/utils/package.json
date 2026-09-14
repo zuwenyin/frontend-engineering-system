@@ -1,8 +1,8 @@
 {
-  "name": "@frontend-engineering-system/utils",
+  "name": "@zuwy/frontend-engineering-system-utils",
   "author": "Wenyin Zu",
   "version": "0.1.0",
-  "description": "Shared utility functions for frontend-engineering-system.",
+  "description": "Shared utility functions for @zuwy/frontend-engineering-system.",
   "license": "MIT",
   "private": false,
   "type": "module",
@@ -32,8 +32,8 @@
     "access": "public"
   },
   "devDependencies": {
-    "@frontend-engineering-system/eslint-config": "workspace:*",
-    "@frontend-engineering-system/ts-config": "workspace:*",
+    "@zuwy/frontend-engineering-system-eslint-config": "workspace:*",
+    "@zuwy/frontend-engineering-system-ts-config": "workspace:*",
     "typescript": "~6.0.2",
     "eslint": "^10.5.0",
     "eslint-config-prettier": "^10.1.8",
