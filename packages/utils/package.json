@@ -1,7 +1,7 @@
 {
   "name": "@zuwy/frontend-engineering-system-utils",
   "author": "Wenyin Zu",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "description": "Shared utility functions for @zuwy/frontend-engineering-system.",
   "license": "MIT",
   "private": false,
