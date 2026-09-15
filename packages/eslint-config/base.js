@@ -6,7 +6,7 @@ import tseslint from "typescript-eslint"
 export default defineConfig([
   // 哪些目录需要忽略
   // 一般来讲，在做 eslint 检查的时候，肯定只检查我们自己写的代码
-  globalIgnores(["dist", "dist-ssr"]),
+  globalIgnores(["dist", "dist-ssr", "storybook-static"]),
   js.configs.recommended,
   ...tseslint.configs.recommended,
   eslintConfigPrettier,
