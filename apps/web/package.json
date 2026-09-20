@@ -10,7 +10,7 @@
     "lint": "eslint .",
     "typecheck": "tsc -b",
     "preview": "vite preview",
-    "pretest:integration": "pnpm --filter @frontend-engineering-system2/ui build",
+    "pretest:integration": "pnpm --filter @zuwy/frontend-engineering-system-ui build",
     "test:integration": "vitest run --config vitest.config.ts",
     "test:integration:watch": "vitest --config vitest.config.ts"
   },

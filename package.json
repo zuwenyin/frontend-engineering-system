@@ -16,13 +16,18 @@
     "build:staging": "pnpm --filter web build:staging",
     "lint": "pnpm --r --if-present run lint",
     "typecheck": "pnpm --r --if-present run typecheck",
+    "typecheck:e2e": "tsc -p tsconfig.json",
     "preview": "pnpm --filter web preview",
     "test:unit:coverage": "pnpm -r --if-present run test:unit:coverage",
     "test:unit": "pnpm -r --if-present run test:unit",
     "test:component:coverage": "pnpm -r --if-present run test:component:coverage",
     "test:component": "pnpm -r --if-present run test:component",
     "test:integration": "pnpm -r --if-present run test:integration",
-    "check": "pnpm lint && pnpm typecheck && pnpm test:unit && pnpm test:component && pnpm test:integration && pnpm build",
+    "dev:e2e": "pnpm --filter @zuwy/frontend-engineering-system-ui build && pnpm --filter web dev --host 127.0.0.1 --port 4173 --strictPort --mode e2e",
+    "test:e2e": "playwright test",
+    "test:e2e:ui": "playwright test --ui",
+    "test:e2e:report": "playwright show-report",
+    "check": "pnpm lint && pnpm typecheck && pnpm typecheck:e2e && pnpm test:unit && pnpm test:component && pnpm test:integration && pnpm build",
     "format": "prettier --write .",
     "format:check": "prettier --check .",
     "prepare": "husky",
@@ -36,8 +41,11 @@
     "@changesets/cli": "^3.0.2",
     "@commitlint/cli": "^21.2.2",
     "@commitlint/config-conventional": "^21.2.2",
+    "@playwright/test": "^1.63.0",
+    "@types/node": "^24.13.3",
     "husky": "^9.1.7",
     "lint-staged": "^17.3.0",
-    "prettier": "^3.9.6"
+    "prettier": "^3.9.6",
+    "typescript": "~6.0.2"
   }
 }
