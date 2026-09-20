@@ -9,33 +9,42 @@
     "build:staging": "tsc -b && vite build --mode staging",
     "lint": "eslint .",
     "typecheck": "tsc -b",
-    "preview": "vite preview"
+    "preview": "vite preview",
+    "pretest:integration": "pnpm --filter @zuwy/frontend-engineering-system-ui build",
+    "test:integration": "vitest run --config vitest.config.ts",
+    "test:integration:watch": "vitest --config vitest.config.ts"
   },
   "dependencies": {
+    "@tanstack/react-query": "^5.102.8",
     "@zuwy/frontend-engineering-system-ui": "workspace:*",
     "@zuwy/frontend-engineering-system-utils": "workspace:*",
-    "@tanstack/react-query": "^5.102.8",
     "react": "^19.2.8",
     "react-dom": "^19.2.8",
     "react-router": "^8.3.1"
   },
   "devDependencies": {
     "@eslint/js": "^10.0.1",
-    "@zuwy/frontend-engineering-system-eslint-config": "workspace:*",
-    "@zuwy/frontend-engineering-system-ts-config": "workspace:*",
     "@tailwindcss/vite": "^4.3.3",
     "@tanstack/react-query-devtools": "^5.102.8",
+    "@testing-library/jest-dom": "catalog:",
+    "@testing-library/react": "catalog:",
+    "@testing-library/user-event": "catalog:",
     "@types/node": "^24.13.3",
     "@types/react": "^19.2.17",
     "@types/react-dom": "^19.2.3",
     "@vitejs/plugin-react": "^6.0.4",
+    "@zuwy/frontend-engineering-system-eslint-config": "workspace:*",
+    "@zuwy/frontend-engineering-system-ts-config": "workspace:*",
     "eslint": "^10.8.0",
     "eslint-plugin-react-hooks": "^7.1.1",
     "eslint-plugin-react-refresh": "^0.5.3",
     "globals": "^17.7.0",
+    "jsdom": "catalog:",
+    "msw": "^2.15.0",
     "tailwindcss": "^4.3.3",
     "typescript": "~6.0.2",
     "typescript-eslint": "^8.65.0",
-    "vite": "^8.2.0"
+    "vite": "^8.2.0",
+    "vitest": "catalog:"
   }
 }

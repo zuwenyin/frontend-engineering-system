@@ -30,7 +30,10 @@
     "typecheck": "tsc --noEmit",
     "storybook": "storybook dev -p 6006",
     "build-storybook": "storybook build",
-    "pack:check": "npm pack --dry-run"
+    "pack:check": "npm pack --dry-run",
+    "test:component": "vitest run --config vitest.component.config.ts",
+    "test:component:watch": "vitest --config vitest.component.config.ts",
+    "test:component:coverage": "vitest run --config vitest.component.config.ts --coverage"
   },
   "publishConfig": {
     "registry": "https://registry.npmjs.org/",
@@ -41,29 +44,30 @@
     "react-dom": "^19.2.7"
   },
   "devDependencies": {
-    "@zuwy/frontend-engineering-system-eslint-config": "workspace:*",
-    "@zuwy/frontend-engineering-system-ts-config": "workspace:*",
     "@chromatic-com/storybook": "latest",
     "@storybook/addon-a11y": "^10.6.0",
     "@storybook/addon-docs": "^10.6.0",
     "@storybook/addon-onboarding": "^10.6.0",
-    "@storybook/addon-vitest": "^10.6.0",
     "@storybook/react-vite": "^10.6.0",
     "@tailwindcss/vite": "^4.3.3",
+    "@testing-library/jest-dom": "catalog:",
+    "@testing-library/react": "catalog:",
+    "@testing-library/user-event": "catalog:",
     "@types/react": "^19.2.17",
     "@types/react-dom": "^19.2.3",
     "@vitejs/plugin-react": "^6.1.0",
-    "@vitest/browser-playwright": "latest",
     "@vitest/coverage-v8": "latest",
+    "@zuwy/frontend-engineering-system-eslint-config": "workspace:*",
+    "@zuwy/frontend-engineering-system-ts-config": "workspace:*",
     "eslint": "^10.6.0",
     "eslint-plugin-storybook": "^10.6.0",
-    "playwright": "latest",
+    "jsdom": "catalog:",
     "react": "^19.2.8",
     "react-dom": "^19.2.8",
     "storybook": "^10.6.0",
     "tailwindcss": "^4.3.3",
     "typescript": "~6.0.2",
     "vite": "^8.2.2",
-    "vitest": "latest"
+    "vitest": "catalog:"
   }
 }

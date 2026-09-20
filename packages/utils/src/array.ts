@@ -89,9 +89,9 @@ export function groupBy<T, K extends PropertyKey>(
   const result = {} as Record<K, T[]>
   for (const item of array) {
     const key = keySelector(item)
-    const group = result[key]
-    if (group) {
-      group.push(item)
+    // 必须用 hasOwn 判断，否则 "constructor" 之类的 key 会命中 Object.prototype 上的同名属性
+    if (Object.hasOwn(result, key)) {
+      result[key].push(item)
     } else {
       result[key] = [item]
     }
