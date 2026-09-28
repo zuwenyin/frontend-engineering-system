@@ -28,6 +28,7 @@
     "test:e2e:ui": "playwright test --ui",
     "test:e2e:report": "playwright show-report",
     "build:dependencies": "pnpm --filter @zuwy/frontend-engineering-system-utils build && pnpm --filter @zuwy/frontend-engineering-system-ui build",
+    "build:deploy": "pnpm build:dependencies && pnpm build",
     "check": "pnpm build:dependencies && pnpm lint && pnpm typecheck && pnpm typecheck:e2e && pnpm test:unit && pnpm test:component && pnpm test:integration && pnpm build",
     "format": "prettier --write .",
     "format:check": "prettier --check .",
